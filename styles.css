@@ -1,0 +1,51 @@
+/* 
+  Enhanced ChatGPT
+  @xilantra
+  https://github.com/Xilantra/enhanced-chatgpt
+  Last updated: Jan 07 2023
+*/
+
+/* hide the clear all conversation button! */
+nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(3) {
+  display: none !important;
+}
+
+nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(4),
+nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(5),
+nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(6),
+nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(7),
+a.flex.py-3.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition-colors.duration-200.text-white.cursor-pointer.text-sm.mb-2.flex-shrink-0.border.border-white\/20 {
+  width: 244px;
+}
+
+/* hide border from the new chat button */
+a.flex.py-3.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition-colors.duration-200.text-white.cursor-pointer.text-sm.mb-2.flex-shrink-0.border.border-white\/20 {
+    border-color: transparent;
+}
+
+/* left padding for the sidebar */
+.md\:pl-\[260px\] {
+  padding-left: 48px !important;
+}
+
+/* sidebar */
+.dark.hidden.bg-gray-900.md\:fixed.md\:inset-y-0.md\:flex.md\:w-\[260px\].md\:flex-col {
+  width: 48px;
+  overflow: hidden;
+  opacity: 0.2;
+  box-shadow:inset -8px 0 8px 2px rgba(0, 0, 0, 0.8);
+  transition: all .16s ease-in-out;
+}
+
+/* hover sidebar */
+.dark.hidden.bg-gray-900.md\:fixed.md\:inset-y-0.md\:flex.md\:w-\[260px\].md\:flex-col:hover {
+  width: 260px;
+  opacity: 1;
+  box-shadow: 8px 0 8px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* hover sidebar: the new chat button */
+.dark.hidden.bg-gray-900.md\:fixed.md\:inset-y-0.md\:flex.md\:w-\[260px\].md\:flex-col:hover
+a.flex.py-3.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition-colors.duration-200.text-white.cursor-pointer.text-sm.mb-2.flex-shrink-0.border.border-white\/20 {
+    border-color: hsla(0,0%,100%,.2);
+}

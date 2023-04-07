@@ -6,11 +6,12 @@
 */
 
 /* hide the clear all conversation button! */
-nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(3) {
+nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(3),
+nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(4) {
   display: none !important;
 }
 
-nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(4),
+
 nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(5),
 nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(6),
 nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(7),
@@ -24,12 +25,21 @@ a.flex.py-3.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition
 }
 
 /* left padding for the sidebar */
-.md\:pl-\[260px\] {
-  padding-left: 48px !important;
+@media (min-width: 768px){
+  .md\:pl-\[260px\]{
+    padding-left: 48px !important;
+  }
+}
+
+/* sidebar padding resets to 0 when in mobile*/
+@media(max-width : 768px){
+  .md\:pl-\[260px\] {
+    padding-left: 0;
+  }
 }
 
 /* sidebar */
-.dark.hidden.bg-gray-900.md\:fixed.md\:inset-y-0.md\:flex.md\:w-\[260px\].md\:flex-col {
+div.dark.hidden.bg-gray-900.md\:flex.md\:w-\[260px\].md\:flex-col {
   width: 48px;
   overflow: hidden;
   opacity: 0.2;
@@ -38,14 +48,19 @@ a.flex.py-3.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition
 }
 
 /* hover sidebar */
-.dark.hidden.bg-gray-900.md\:fixed.md\:inset-y-0.md\:flex.md\:w-\[260px\].md\:flex-col:hover {
+div.dark.hidden.bg-gray-900.md\:flex.md\:w-\[260px\].md\:flex-col:hover {
   width: 260px;
   opacity: 1;
   box-shadow: 8px 0 8px 2px rgba(0, 0, 0, 0.24);
 }
 
 /* hover sidebar: the new chat button */
-.dark.hidden.bg-gray-900.md\:fixed.md\:inset-y-0.md\:flex.md\:w-\[260px\].md\:flex-col:hover
+div.dark.hidden.bg-gray-900.md\:flex.md\:w-\[260px\].md\:flex-col:hover
 a.flex.py-3.px-3.items-center.gap-3.rounded-md.hover\:bg-gray-500\/10.transition-colors.duration-200.text-white.cursor-pointer.text-sm.mb-2.flex-shrink-0.border.border-white\/20 {
     border-color: hsla(0,0%,100%,.2);
 }
+
+
+
+
+

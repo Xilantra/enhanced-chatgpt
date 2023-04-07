@@ -5,7 +5,7 @@
   Last updated: Jan 07 2023
 */
 
-/* hide the clear all conversation button! */
+/* hide respectively "clear all" conversation "Update to Plus" button! */
 nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(3),
 nav.flex.h-full.flex-1.flex-col.space-y-1.p-2 > a:nth-child(4) {
   display: none !important;
